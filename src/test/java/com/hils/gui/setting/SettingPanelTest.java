@@ -10,11 +10,10 @@ import java.awt.event.WindowEvent;
 import javax.swing.JFrame;
 
 import com.hils.gui.MainFrame;
-import com.hils.gui.summery.BatterySummeryPanel;
 
 public class SettingPanelTest {
 	int w = 500;
-	int h = 300;
+	int h = 200;
 	
 	public static void main(String[] args) {
 		SettingPanelTest app = new SettingPanelTest();

@@ -1,4 +1,4 @@
-package com.hils.gui;
+package com.hils.gui.summery;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -8,6 +8,7 @@ import java.awt.event.WindowEvent;
 
 import javax.swing.JFrame;
 
+import com.hils.gui.MainFrame;
 import com.hils.gui.summery.SummeryPanel;
 
 public class SummeryPanelTest {

@@ -1,4 +1,4 @@
-package com.hils.gui;
+package com.hils.gui.summery;
 
 import java.awt.EventQueue;
 import java.awt.FlowLayout;
@@ -8,6 +8,7 @@ import java.awt.event.WindowEvent;
 
 import javax.swing.JFrame;
 
+import com.hils.gui.MainFrame;
 import com.hils.gui.summery.BatterySummeryPanel;
 
 public class BatterySummeryPanelTest {
