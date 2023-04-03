@@ -18,7 +18,7 @@ import javax.swing.SwingConstants;
  */
 public class PCSSummeryPanel extends JPanel {
 	String[] str = { "PCS Fault", "지령값", "유효전력", "DC전압", "DC전류", "Fault" };
-	JButton 	detailBTN = new JButton("...");
+	JButton 	detailBTN;
 	
 	JLabel labelReferValue; // 지령값
 	JLabel labelActivePower;// 유효전력
@@ -34,7 +34,7 @@ public class PCSSummeryPanel extends JPanel {
 		PCSSummery summery = new PCSSummery(true,0.0, 0.0, 876.7,1.7,1);
 		
 		JCheckBox 	checkBox = new JCheckBox(str[0], summery.isPCS_FAULT());	
-		
+		detailBTN = new JButton("Records");
 		labelReferValue =new JLabel(summery.getReferValue()+"", SwingConstants.RIGHT);
 		labelActivePower=new JLabel(summery.getActivePower()+"", SwingConstants.RIGHT);
 		labelDcVoltage 	=new JLabel(summery.getDcVoltage()+"", SwingConstants.RIGHT);

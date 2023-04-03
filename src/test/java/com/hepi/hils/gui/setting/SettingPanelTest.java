@@ -28,7 +28,8 @@ public class SettingPanelTest {
 					// create BatterySummeryPanel
 					frame.setLayout(new BorderLayout());
 					frame.setPreferredSize(new Dimension(w, h));;
-					frame.add(new SettingOptionPanel(), BorderLayout.CENTER);					
+					//frame.add(new SettingOptionPanel(), BorderLayout.CENTER);
+					frame.add(new SettingInfoPanel(), BorderLayout.CENTER);
 
 					frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 					frame.setSize(HProperty.screenW, HProperty.screenH);

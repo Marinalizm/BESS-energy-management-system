@@ -18,7 +18,7 @@ import javax.swing.SwingConstants;
  */
 public class BMSummeryPanel extends JPanel {
 	String[] str = { "PCS Fault", "지령값", "유효전력", "DC전압", "DC전류", "Fault" };	
-	JButton detailBTN = new JButton("...");
+	JButton detailBTN;
 	
 	JLabel labelSoc;
 	JLabel labelSoh;
@@ -33,13 +33,13 @@ public class BMSummeryPanel extends JPanel {
 		BMSSummery summery = new BMSSummery(false,45.5, 100.0, 873.3,0.0,3);
 		
 		JCheckBox 	checkBox = new JCheckBox(str[0], summery.isBMS_FAULT());
-		
+		detailBTN		= new JButton("Records");
 		labelSoc 		=new JLabel(summery.getSoc()+"", SwingConstants.RIGHT);
 		labelSoh		=new JLabel(summery.getSoh()+"", SwingConstants.RIGHT);
 		labelDcVoltage 	=new JLabel(summery.getDcVoltage()+"", SwingConstants.RIGHT);
 		labelDcCurrent 	=new JLabel(summery.getDcCurrent()+"", SwingConstants.RIGHT);
 		labelBMS_HB 	=new JLabel(summery.getBMS_HB()+"", SwingConstants.RIGHT);
-			
+	
 		//gui				
 		this.add(checkBox);
 		this.add(detailBTN);

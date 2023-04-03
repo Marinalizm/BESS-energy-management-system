@@ -8,39 +8,31 @@ import java.awt.event.WindowEvent;
 
 import javax.swing.JFrame;
 
+import com.hepi.hils.gui.MainForm;
 import com.hepi.hils.gui.MainFrame;
 import com.hepi.hils.property.HProperty;
 	
+/**
+ * 
+ * @author hyun keun lim since 20230301
+ *
+ */
 public class App {
-
 	public static void main(String[] args) {
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         HProperty.screenH = (int) screenSize.getHeight();
         HProperty.screenW = (int) screenSize.getWidth();
         
         EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                try {
-                    MainFrame frame = new MainFrame();
-                    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                    //frame.setSize(HProperty.screenW, HProperty.screenH);
-                    frame.setExtendedState(JFrame.MAXIMIZED_BOTH); 
-                    //frame.pack();
-                    frame.setLocationRelativeTo(null);
-                    frame.setVisible(true);
-                    frame.setResizable(true);
-
-                    frame.addWindowListener(new WindowAdapter() {
-                        @Override
-                        public void windowClosing(WindowEvent e) {
-                            System.exit(0);
-                        }
-                    });
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        });				
+			public void run() {
+				try {
+					MainForm window = new MainForm();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});			
 
 	}
 

@@ -8,9 +8,12 @@ import java.awt.BorderLayout;
 import java.awt.Component;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
+import java.awt.GridLayout;
+
 import javax.swing.BorderFactory;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 import javax.swing.border.Border;
 
 /**
@@ -31,15 +34,30 @@ public class SettingInfoPanel extends JPanel {
     public SettingInfoPanel() {
         Border border = BorderFactory.createEtchedBorder();
         this.setBorder(border);
+        this.setLayout(new GridLayout(2, 4));
+        this.add(new JLabel(str[0]));
+        this.add(new JLabel(str[1]));
+        this.add(new JLabel(str[2]));
+        this.add(new JLabel(str[3]));
+        
+        this.setSize(300, 400);;
+        /*
         this.setLayout(new GridBagLayout());
+        
+        
         c = new GridBagConstraints();
         c.weightx = 1.0;
         c.weighty = 1.0;
         c.fill = GridBagConstraints.BOTH;
         
         layout(new JLabel(str[0]),0,0,1,1);
-        layout(new JLabel(str[0]),1,0,1,1);
-       
+        layout(new JTextField(10),1,0,1,1);
+        layout(new JLabel(str[1]),2,0,1,1);
+        layout(new JLabel("2 KW"),3,0,1,1);
+        
+        layout(new JLabel(str[2]),0,1,1,1);
+        layout(new JLabel(str[3]),1,1,1,1);
+        */
         
     }
 
@@ -50,5 +68,7 @@ public class SettingInfoPanel extends JPanel {
         c.gridheight = height;  // 컨테이너 높이
         add(obj, c);
     }
+    
+   
 
 }
