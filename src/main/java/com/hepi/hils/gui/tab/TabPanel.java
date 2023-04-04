@@ -10,6 +10,9 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.Border;
 
+import com.hepi.hils.vo.tab.PCSStatus;
+
+
 /**
  * control tab panel
  * @author hyun keun lim 
@@ -18,32 +21,57 @@ import javax.swing.border.Border;
 public class TabPanel extends JPanel{	
 	public String title;
 	
+	
 	/**
 	//top panel
 	//PCS 상태, Battery Status, Control
 	//body panel		
 	 * gui inital 모양 변경
-	*/
-	
+	*/	
 	public TabPanel(String tab1Title) {
 		this.title	= tab1Title;
 		
 		this.setLayout(new BorderLayout(5,5));
-		JPanel topPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
-		JPanel pcsStatusPanel = new JPanel(new GridLayout(2,6));
+		//JPanel topPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+		JPanel topPanel = new JPanel(new GridLayout(1,3));
+		JPanel pcsStatusPanel = new JPanel(new GridLayout(3,6));
 		pcsStatusPanel.setBorder(BorderFactory.createTitledBorder("PCS Status"));
-		pcsStatusPanel.add(new JLabel("1"));
+		
+		PCSStatus pcsStatus = new PCSStatus(
+				PCSStatus.Remote,
+				PCSStatus.Ready,
+				PCSStatus.Run,
+				PCSStatus.Standby,
+				PCSStatus.CPMode
+		);
+		
+		
+		String[] LABELS = {
+			"REMOTE/LOCAL",
+			"Ready",
+			"Run/Stop",
+			"StandBy",
+			"CP/CV Mode"
+		};
+		pcsStatusPanel.add(new JLabel(LABELS[0]));
 		pcsStatusPanel.add(new JLabel("2"));
-		pcsStatusPanel.add(new JLabel("3"));
+		pcsStatusPanel.add(new JLabel(LABELS[1]));
 		pcsStatusPanel.add(new JLabel("4"));
-		pcsStatusPanel.add(new JLabel("5"));
+		pcsStatusPanel.add(new JLabel(LABELS[2]));
 		pcsStatusPanel.add(new JLabel("6"));
-		pcsStatusPanel.add(new JLabel("7"));
+		pcsStatusPanel.add(new JLabel(LABELS[3]));
 		pcsStatusPanel.add(new JLabel("8"));
-		pcsStatusPanel.add(new JLabel("9"));
+		pcsStatusPanel.add(new JLabel(LABELS[4]));
 		pcsStatusPanel.add(new JLabel("10"));
-		pcsStatusPanel.add(new JLabel("11"));
-		pcsStatusPanel.add(new JLabel("12"));		
+		pcsStatusPanel.add(new JLabel());
+		pcsStatusPanel.add(new JLabel());
+		pcsStatusPanel.add(new JLabel());		
+		pcsStatusPanel.add(new JLabel());		
+		pcsStatusPanel.add(new JLabel());
+		pcsStatusPanel.add(new JLabel());
+		pcsStatusPanel.add(new JLabel());
+		pcsStatusPanel.add(new JLabel());
+		
 		topPanel.add(pcsStatusPanel);
 		
 		JPanel batteryStatusPanel = new JPanel(new GridLayout(3,5));

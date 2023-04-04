@@ -60,16 +60,3 @@ class Operations extends JPanel {
 	}	
 }
 
-class SettingStatus extends JPanel{
-	String[] labels = {
-			"참여율",
-			"PCS 대수",
-			"PCS 정격",
-			"Enable Log"
-	};
-	
-	public SettingStatus() {
-		
-	}
-	
-}

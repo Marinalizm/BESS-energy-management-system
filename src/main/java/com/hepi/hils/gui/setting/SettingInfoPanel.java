@@ -30,22 +30,26 @@ public class SettingInfoPanel extends JPanel {
         "PCS 대수",
         "Enable Log"
     };
-
+    
+    JTextField  attectionRate;//참여율
+    JLabel		pcsRating;
     GridBagConstraints c;
-
     public SettingInfoPanel() {
         Border border = BorderFactory.createEtchedBorder();
         this.setBorder(border);
         this.setLayout(new GridLayout(6,2));
         this.add(new JLabel(str[0]));
-        this.add(new JTextField(10));
+        attectionRate =new JTextField("1.0",10); 
+        this.add(attectionRate);
         this.add(new JLabel(str[1]));
         
         Font font = new Font("맑은 고딕", Font.BOLD,12);
-        this.add(new JLabel("2 KW"));
+        pcsRating = new JLabel("2 KW");
+        pcsRating.setFont(font);
+        this.add(pcsRating);
         
-        JLabel l2 = new JLabel(str[2]);
-        this.add(l2);
+        
+        this.add(new JLabel(str[2]));
         this.add(new JLabel("2 Set"));
         this.add(new JCheckBox(str[3]));
         this.add(new JLabel(""));
