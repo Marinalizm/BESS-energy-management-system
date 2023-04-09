@@ -33,15 +33,17 @@ public class TabPanel extends JPanel{
 		
 		this.setLayout(new BorderLayout());
 		JPanel topPanel = new JPanel();
-		topPanel.setLayout(new GridLayout(0, 2, 0, 0));
+		topPanel.setLayout(new GridLayout(0, 3, 0, 0));
 		//JPanel topPanel = new JPanel(new GridLayout(1,3));
 		PCSStatusPanel pcsStatusPanel = new PCSStatusPanel();
 		topPanel.add(pcsStatusPanel);
 		
 
 		BatteryStatusPanel batteryPanel = new BatteryStatusPanel();
-		topPanel.add(batteryPanel);	
+		topPanel.add(batteryPanel);		
 		
+		ControlPanel controlPanel = new ControlPanel();
+		topPanel.add(controlPanel);
 		this.add(topPanel, BorderLayout.NORTH);
 		
 	}

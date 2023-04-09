@@ -24,10 +24,11 @@ import com.hepi.hils.gui.setting.SettingOptionPanel;
 import com.hepi.hils.gui.summery.PCSBMSSummery;
 import com.hepi.hils.gui.tab.TabPanel;
 import com.hepi.hils.property.HProperty;
-import java.awt.GridLayout;
+
 import java.awt.FlowLayout;
-import java.awt.Component;
-import javax.swing.BoxLayout;
+import java.awt.GridLayout;
+import java.awt.BorderLayout;
+
 
 /**
  * main gui
@@ -118,12 +119,13 @@ public class MainForm {
         
         summeryPanel.add(pcsbmsSummery1);
         summeryPanel.add(pcsbmsSummery2);
+        
         FlowLayout fl_middlePanel = new FlowLayout(FlowLayout.LEFT, 5, 5);
         middlePanel.setLayout(fl_middlePanel);
         
-        SettingOptionPanel settingOptionPanel = new SettingOptionPanel();
+        SettingOptionPanel settingOptionPanel = new SettingOptionPanel();     
         middlePanel.add(settingOptionPanel);
-        SettingInfoPanel settingInfoPanel = new SettingInfoPanel();
+        SettingInfoPanel settingInfoPanel = new SettingInfoPanel();        
         middlePanel.add(settingInfoPanel);
         
         String tab1Title = "PCS/BMS #1"; 
@@ -139,7 +141,7 @@ public class MainForm {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 990, 663);
+		frame.setBounds(100, 100, 1636, 1020);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		topPanel = new javax.swing.JPanel();

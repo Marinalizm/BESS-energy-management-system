@@ -21,7 +21,7 @@ public class PCSStatusPanel extends JPanel {
 	 */
 	public PCSStatusPanel() {
 		setBorder(new TitledBorder(null, "PCS Status", TitledBorder.LEADING, TitledBorder.TOP, null, null));
-		GridLayout gridLayout = new GridLayout(0,6);
+		GridLayout gridLayout = new GridLayout(3,6);
 		gridLayout.setVgap(2);
 		gridLayout.setHgap(2);
 		//gridLayout.setVgap(5);
@@ -29,14 +29,16 @@ public class PCSStatusPanel extends JPanel {
 		this.setLayout(gridLayout);
 		
 		JLabel lblNewLabel_1 = new JLabel("Remote/Local");
+		lblNewLabel_1.setHorizontalAlignment(SwingConstants.RIGHT);
 		add(lblNewLabel_1);
 		
-		textField = new JTextField();
+		textField = new JTextField();		
 		textField.setHorizontalAlignment(SwingConstants.CENTER);
 		add(textField);
 		textField.setColumns(5);
 		
 		JLabel lblNewLabel_2 = new JLabel("Ready");
+		lblNewLabel_2.setHorizontalAlignment(SwingConstants.RIGHT);
 		add(lblNewLabel_2);
 		
 		textField_1 = new JTextField();
@@ -45,6 +47,7 @@ public class PCSStatusPanel extends JPanel {
 		add(textField_1);
 		
 		JLabel lblNewLabel_3 = new JLabel("Run/Stop");
+		lblNewLabel_3.setHorizontalAlignment(SwingConstants.RIGHT);
 		add(lblNewLabel_3);
 		
 		textField_2 = new JTextField();
@@ -53,6 +56,7 @@ public class PCSStatusPanel extends JPanel {
 		add(textField_2);
 		
 		JLabel lblNewLabel = new JLabel("Standby");
+		lblNewLabel.setHorizontalAlignment(SwingConstants.RIGHT);
 		add(lblNewLabel, BorderLayout.NORTH);
 		
 		textField_3 = new JTextField();
@@ -61,6 +65,7 @@ public class PCSStatusPanel extends JPanel {
 		add(textField_3);
 		
 		JLabel lblCpcvMode = new JLabel("CP/CV mode");
+		lblCpcvMode.setHorizontalAlignment(SwingConstants.RIGHT);
 		add(lblCpcvMode);
 		
 		textField_4 = new JTextField();
@@ -82,7 +87,9 @@ public class PCSStatusPanel extends JPanel {
 		
 		JLabel lblNewLabel_4_1_1_1_1_1 = new JLabel("");
 		add(lblNewLabel_4_1_1_1_1_1);
-
+		
+		
+		add(new JLabel(""));
 	}
 
 }

@@ -35,9 +35,12 @@ public class SettingInfoPanel extends JPanel {
     JLabel		pcsRating;
     GridBagConstraints c;
     public SettingInfoPanel() {
-        Border border = BorderFactory.createEtchedBorder();
+        Border border = BorderFactory.createEtchedBorder();        
         this.setBorder(border);
-        this.setLayout(new GridLayout(6,2));
+        GridLayout gridLayout = new GridLayout(6,2);
+        //gridLayout.setVgap(2);
+        //gridLayout.setHgap(2);
+        this.setLayout(gridLayout);
         this.add(new JLabel(str[0]));
         attectionRate =new JTextField("1.0",10); 
         this.add(attectionRate);
