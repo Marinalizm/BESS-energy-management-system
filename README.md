@@ -203,11 +203,6 @@ java -cp target/classes org.hils.gui.MainForm east     # Right monitoring
 ---
 
 ## 💻 System Requirements
-│              │   - Charts       │   - Alarms        │
-│              │   - Config       │   - Events        │
-└──────────────┴──────────────────┴───────────────────┘
-```
-
 ### Technology Stack
 
 - **Language**: Java 21
@@ -616,89 +611,6 @@ The EMS v2.0 implements a modern 4-panel layout optimized for real-time control 
 | Real-time Charts | RealTimeChartPanel.java | `org.hils.gui.chart` |
 | System Config | SystemConfigPanel.java | `org.hils.gui.config` |
 | Right Monitoring | MainForm.java | Integrated in main form |
-
----
-
-## 🤝 Contributing
-
-### Development Workflow
-
-1. Create feature branch from `main`
-2. Implement changes with clear commit messages
-3. Test thoroughly (unit tests + manual testing)
-4. Update documentation
-5. Submit pull request
-
-### Code Standards
-
-- Follow Java naming conventions
-- Add JavaDoc comments for public methods
-- Maintain consistent indentation (4 spaces)
-- Keep methods focused and concise
-- Write meaningful commit messages
-
----
-
-## 📄 License
-
-This project is proprietary software. All rights reserved.
-
-**Copyright © 2023-2024 HEPI**
-
-Unauthorized copying, modification, distribution, or use of this software is strictly prohibited.
-
----
-
-## 👥 Authors
-
-- **Hyun Keun Lim** - Initial work and architecture (since 2023.03.01)
-
----
-
-## 📞 Contact
-
-For questions, support, or feature requests, please contact:
-
-- **Project Lead**: Hyun Keun Lim
-- **Email**: [Contact through organization]
-
----
-
-## 🔄 Version History
-
-### v2.0 (Current - December 2024)
-- ✨ **New 4-panel layout** with enhanced controls
-- ✨ **Real-time battery and PCS direct control** with sliders and immediate feedback
-- ✨ **Improved right monitoring panel**:
-  - 20pt large fonts for better readability (25% increase)
-  - Real-time data simulation every 2 seconds
-  - Dynamic status color coding
-  - Event logging with timestamps
-  - Scrollable content areas
-  - Emoji icons for visual clarity
-- ✨ **Advanced monitoring panels** with system font support
-- ✨ **Real-time chart visualization** for power, SOC, and frequency
-- ✨ **System configuration panel** with user management
-- ✨ **Multi-level emergency stop system** for safety
-- ✨ **Enhanced alarm management** with priority classification
-- ✨ **English-only interface** for international compatibility
-- 🔧 **Fixed compilation errors** in summary panels
-- 🔧 **Removed Lombok dependency** for better compatibility
-- 📝 **Comprehensive documentation** with screen configuration details
-
-### v1.0
-- Initial release with basic monitoring
-- Simple control interface
-- PCS/BMS status display
-- Basic alarm system
-
----
-
-## 🙏 Acknowledgments
-
-- JFreeChart for charting capabilities
-- InfluxDB for time-series data management
-- Java Swing community for UI components
 
 
 ---
