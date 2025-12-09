@@ -308,7 +308,7 @@ java org.hils.gui.MainForm east
 
 # Test left control panel only
 java org.hils.gui.MainForm west
-```
+
 
 ### Basic Operations
 
@@ -490,21 +490,6 @@ mvn test
 mvn test -Dtest=ImageLoadTest
 ```
 
-### Code Structure Guidelines
-
-- **GUI Components**: Place in `org.hils.gui.*` packages
-- **Control Logic**: Implement in `org.hils.control.*` packages
-- **Data Models**: Define in `org.hils.vo.*` packages
-- **Events**: Handle in `org.hils.event.*` packages
-
-### Adding New Features
-
-1. Create appropriate panel class in `gui` package
-2. Register panel in `MainForm.java`
-3. Add data model in `vo` package if needed
-4. Implement control logic in `control` package
-5. Update documentation
-
 ---
 
 ## 🖥️ Screen Configuration (v2.0)
@@ -515,34 +500,34 @@ The EMS v2.0 implements a modern 4-panel layout optimized for real-time control 
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
-│                         Header Panel                                     │
-│  🔋 EMS | 300MW BESS | 🟢 System Normal | 2024.10.29 15:30             │
+│                         Header Panel                                    │
+│  🔋 EMS | 300MW BESS | 🟢 System Normal | 2024.10.29 15:30               │
 │          Real-time Monitoring & Control System                          │
 ├──────────────┬───────────────────────────────────┬──────────────────────┤
 │ Left Control │      Center Tab Panel             │ Right Monitoring     │
-│  (350px)     │                                   │     (350px)         │
-│              │                                   │                     │
-│⚡ Battery    │ [System][Battery][PCS][Grid]     │ Power: 150.5MW      │
-│  & PCS       │ [Charts][Config]                  │ Freq: 60.05Hz       │
-│  Control     │                                   │ Voltage: 22.9kV     │
-│              │   Current Tab Content             │ Temp: 25.3°C        │
-│ Battery:     │                                   │                     │
-│ - SOC Target │                                   │ Alarm Status        │
-│ - Power Set  │                                   │ Event Log           │
-│ - Charge     │                                   │                     │
-│ - Discharge  │                                   │                     │
-│ - Stop       │                                   │                     │
-│ - E-STOP     │                                   │                     │
-│              │                                   │                     │
-│ PCS:         │                                   │                     │
-│ - Set Power  │                                   │                     │
-│ - Frequency  │                                   │                     │
-│ - Mode       │                                   │                     │
-│ - Start/Stop │                                   │                     │
-│ - Diag       │                                   │                     │
+│  (350px)     │                                   │     (350px)          │
+│              │                                   │                      │
+│⚡ Battery     │ [System][Battery][PCS][Grid]      │ Power: 150.5MW       │
+│  & PCS       │ [Charts][Config]                  │ Freq: 60.05Hz        │
+│  Control     │                                   │ Voltage: 22.9kV      │
+│              │   Current Tab Content             │ Temp: 25.3°C         │
+│ Battery:     │                                   │                      │
+│ - SOC Target │                                   │ Alarm Status         │
+│ - Power Set  │                                   │ Event Log            │
+│ - Charge     │                                   │                      │
+│ - Discharge  │                                   │                      │
+│ - Stop       │                                   │                      │
+│ - E-STOP     │                                   │                      │
+│              │                                   │                      │
+│ PCS:         │                                   │                      │
+│ - Set Power  │                                   │                      │
+│ - Frequency  │                                   │                      │
+│ - Mode       │                                   │                      │
+│ - Start/Stop │                                   │                      │
+│ - Diag       │                                   │                      │
 ├──────────────┴───────────────────────────────────┴──────────────────────┤
 │                         Status Bar                                      │
-│ 🔌 Connected | 📊 Data Normal | ⚠️ No Alarms    EMS v2.0 | Ready      │
+│ 🔌 Connected | 📊 Data Normal | ⚠️ No Alarms    EMS v2.0 | Ready         │
 └─────────────────────────────────────────────────────────────────────────┘
 ```
 
